@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "520195915309",
+    "project_id": "envioly-b5680",
+    "storage_bucket": "envioly-b5680.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520195915309:android:d10a954440dc9b785fc2a4",
+        "android_client_info": {
+          "package_name": "com.envioly.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520195915309-ss55fddp8ku9ml4bnqpr3pkkv42eecic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.envioly.beta",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "520195915309-g8ls4ravkk5l97bdv4sbciqkf4m7cvur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAts2gSL1Nkn8ILoxrtHsbV9YVc5HcZfhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520195915309-g8ls4ravkk5l97bdv4sbciqkf4m7cvur.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "520195915309-6b1treaj53pvr2gkm1vkkupepr9s7qqq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.envioly.beta"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520195915309:android:b2a637a19899f72d5fc2a4",
+        "android_client_info": {
+          "package_name": "com.envioly.dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520195915309-m9oiolpl8gvr5q80gdaej0cmcoe2u7q6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.envioly.dashboard",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "520195915309-g8ls4ravkk5l97bdv4sbciqkf4m7cvur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAts2gSL1Nkn8ILoxrtHsbV9YVc5HcZfhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520195915309-g8ls4ravkk5l97bdv4sbciqkf4m7cvur.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "520195915309-6b1treaj53pvr2gkm1vkkupepr9s7qqq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.envioly.beta"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
