@@ -9,6 +9,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/upload_media.dart';
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -259,17 +260,25 @@ class _InspectionStep3PhotosWidgetState
                                           itemBuilder: (context, photosIndex) {
                                             final photosItem =
                                                 photos[photosIndex];
-                                            return ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(10.0),
-                                              child: Image.network(
-                                                valueOrDefault<String>(
-                                                  photosItem,
-                                                  'https://s3-alpha-sig.figma.com/img/ea8f/f5a2/1158dea35607e4d1100dc6074b0e8c78?Expires=1673222400&Signature=mm-rKiyl2JJrZH1wfcECErDD2Cy0w3Z5GLgADQAevIXH0WXKYJ7H1f-kg3~VqQhzclv3JIAgP8ryrplsYdzKQppZzfUmiE5nIHfPdNivsOpkepelin3cjTCfI~~NwFBFxzEbR3w3FEI7KYfr-Ftr4-9U7r6qT5qfMWrKMeKGYWQJt3JPZuPg10G5wdMos6905cyQkqDoW-TcYcIvUYo95p-lltKqKyDvim~rtvdY7wW~AaPlQPPoVVB~UDakYEsKlP7KjCT9Lnu0CraReOGwCC9yYdV6lALKq0cB-gXuADIg7rfL0SI2MTn1-2lUA~zCIUjz-Y~UpPyNd-2opylHUw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                                            return InkWell(
+                                              onDoubleTap: () async {
+                                                await FirebaseStorage.instance
+                                                    .refFromURL(
+                                                        photosIndex.toString())
+                                                    .delete();
+                                              },
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(10.0),
+                                                child: Image.network(
+                                                  valueOrDefault<String>(
+                                                    photosItem,
+                                                    'https://s3-alpha-sig.figma.com/img/ea8f/f5a2/1158dea35607e4d1100dc6074b0e8c78?Expires=1673222400&Signature=mm-rKiyl2JJrZH1wfcECErDD2Cy0w3Z5GLgADQAevIXH0WXKYJ7H1f-kg3~VqQhzclv3JIAgP8ryrplsYdzKQppZzfUmiE5nIHfPdNivsOpkepelin3cjTCfI~~NwFBFxzEbR3w3FEI7KYfr-Ftr4-9U7r6qT5qfMWrKMeKGYWQJt3JPZuPg10G5wdMos6905cyQkqDoW-TcYcIvUYo95p-lltKqKyDvim~rtvdY7wW~AaPlQPPoVVB~UDakYEsKlP7KjCT9Lnu0CraReOGwCC9yYdV6lALKq0cB-gXuADIg7rfL0SI2MTn1-2lUA~zCIUjz-Y~UpPyNd-2opylHUw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                                                  ),
+                                                  width: 150.0,
+                                                  height: 150.0,
+                                                  fit: BoxFit.cover,
                                                 ),
-                                                width: 150.0,
-                                                height: 150.0,
-                                                fit: BoxFit.cover,
                                               ),
                                             );
                                           },
